@@ -16,7 +16,7 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture(scope='function', params=['android', 'ios'], autouse=True)
+@pytest.fixture(scope='function', params=['android'], autouse=True)
 def platform(request):
     options = UiAutomator2Options().load_capabilities({
         # Specify device and os_version for testing

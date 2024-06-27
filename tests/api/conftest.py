@@ -7,7 +7,7 @@ def load_env():
     load_dotenv()
 
 
-@pytest.fixture
+@pytest.fixture(scope="session", autouse=True)
 def add_headers():
     headers = {
         'Accept': 'application/json',

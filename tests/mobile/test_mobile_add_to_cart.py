@@ -15,8 +15,8 @@ from tsum_tests.data.items import MobileItem
 @allure.link("https://www.tsum.ru/", name="Main Page")
 def test_add_to_cart():
     test_item = MobileItem(
-        kind='bag',
-        name='Сумка The Tote Bag'
+        kind="bag",
+        name="Сумка The Tote Bag"
     )
 
     main_screen.skip_first_notifications()

@@ -2,7 +2,7 @@ import allure
 from allure_commons.types import Severity
 from tsum_tests.pages.ui.profile_page import profile_page
 from tsum_tests.data.menu import ProfileMenu
-import tests.ui.test_main_page as login_existing_user
+import tests.ui.test_web_main_page as login_existing_user
 
 
 @allure.tag('web')

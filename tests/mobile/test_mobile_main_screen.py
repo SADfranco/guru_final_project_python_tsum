@@ -15,7 +15,7 @@ from tsum_tests.data.menu import MobileTabName
 def test_new_in_tab():
     test_tab_name = MobileTabName(
         tab_name='new_in',
-        title_name='Новинки'
+        title_name='Новые поступления'
     )
 
     main_screen.skip_first_notifications()

@@ -7,12 +7,12 @@ from tsum_tests.helper.load_schema import load_schema
 
 @allure.tag('api')
 @allure.tag('regress')
-@allure.title('Searching item from main page')
+@allure.title('Check non existing email')
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "SADfranco")
-@allure.feature("Search item")
-@allure.link("https://www.tsum.ru/", name="Main Page")
-def test_search_item(add_headers):
+@allure.feature("Authorization")
+@allure.link("https://www.tsum.ru/personal/profile/", name="Main Page")
+def test_login_non_existing_user_by_email(add_headers):
     schema = load_schema('non_existing_email.json')
 
     endpoint = "/authorize/check-email"

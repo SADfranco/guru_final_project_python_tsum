@@ -1,11 +1,10 @@
-
 import requests
 import allure
 from tsum_tests.utils import attach
 
 
 def api_get(endpoint, **kwargs):
-    with allure.step("API GET Request"):
+    with allure.step(f"API GET Request to endpoint {endpoint}"):
         response = requests.get(url="https://api.tsum.ru" + endpoint, **kwargs)
 
         attach.request_url_and_body(response)
@@ -16,7 +15,7 @@ def api_get(endpoint, **kwargs):
 
 
 def api_post(endpoint, **kwargs):
-    with allure.step("API POST Request"):
+    with allure.step(f"API POST Request to endpoint {endpoint}"):
         response = requests.post(url="https://api.tsum.ru" + endpoint, **kwargs)
 
         attach.request_url_and_body(response)

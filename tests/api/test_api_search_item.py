@@ -22,7 +22,6 @@ def test_search_item(add_headers):
     }
     response = api_post(endpoint, headers=add_headers, json=payload)
 
-
     body = response.json()
     items_model = [element["id"] for element in body]
     assert response.status_code == 200

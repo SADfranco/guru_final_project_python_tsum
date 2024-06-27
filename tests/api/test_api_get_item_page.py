@@ -7,7 +7,7 @@ from tsum_tests.helper.load_schema import load_schema
 
 @allure.tag('api')
 @allure.tag('regress')
-@allure.title('Item page')
+@allure.title('Get item page')
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "SADfranco")
 @allure.feature("Item info")

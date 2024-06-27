@@ -1,0 +1,397 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "modelId": {
+      "type": "integer"
+    },
+    "modelExtId": {
+      "type": "string"
+    },
+    "codeVnd": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "banner": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "imageUrl",
+        "banner"
+      ]
+    },
+    "color": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "imageUrl"
+      ]
+    },
+    "category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug"
+      ]
+    },
+    "photos": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "tiny": {
+              "type": "string"
+            },
+            "small": {
+              "type": "string"
+            },
+            "middle": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "tiny",
+            "small",
+            "middle"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tiny": {
+              "type": "string"
+            },
+            "small": {
+              "type": "string"
+            },
+            "middle": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "tiny",
+            "small",
+            "middle"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tiny": {
+              "type": "string"
+            },
+            "small": {
+              "type": "string"
+            },
+            "middle": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "tiny",
+            "small",
+            "middle"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tiny": {
+              "type": "string"
+            },
+            "small": {
+              "type": "string"
+            },
+            "middle": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "tiny",
+            "small",
+            "middle"
+          ]
+        }
+      ]
+    },
+    "videos": {
+      "type": "array",
+      "items": {}
+    },
+    "preview360": {
+      "type": "null"
+    },
+    "availableColors": {
+      "type": "array",
+      "items": {}
+    },
+    "description": {
+      "type": "string"
+    },
+    "information": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "deactivationDescription": {
+      "type": "null"
+    },
+    "preorderDescription": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {}
+    },
+    "sizeTable": {
+      "type": "null"
+    },
+    "sizes": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "extId": {
+              "type": "string"
+            },
+            "contentId": {
+              "type": "string"
+            },
+            "sizeId": {
+              "type": "integer"
+            },
+            "vendorSizeName": {
+              "type": "string"
+            },
+            "attributes": {
+              "type": "object",
+              "properties": {
+                "russianLabel": {
+                  "type": "string"
+                },
+                "russianSize": {
+                  "type": "string"
+                },
+                "vendorLabel": {
+                  "type": "string"
+                },
+                "vendorSize": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "russianLabel",
+                "russianSize",
+                "vendorLabel",
+                "vendorSize"
+              ]
+            },
+            "isAvailable": {
+              "type": "boolean"
+            },
+            "isSoon": {
+              "type": "boolean"
+            },
+            "availableFrom": {
+              "type": "null"
+            },
+            "inWishlist": {
+              "type": "boolean"
+            },
+            "jewelry": {
+              "type": "null"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "price": {
+              "type": "object",
+              "properties": {
+                "originalPrice": {
+                  "type": "integer"
+                },
+                "priceWithDiscount": {
+                  "type": "integer"
+                },
+                "discount": {
+                  "type": "integer"
+                },
+                "currency": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "originalPrice",
+                "priceWithDiscount",
+                "discount",
+                "currency"
+              ]
+            },
+            "additional": {
+              "type": "object",
+              "properties": {
+                "tags": {
+                  "type": "array",
+                  "items": {}
+                }
+              },
+              "required": [
+                "tags"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "extId",
+            "contentId",
+            "sizeId",
+            "vendorSizeName",
+            "attributes",
+            "isAvailable",
+            "isSoon",
+            "availableFrom",
+            "inWishlist",
+            "jewelry",
+            "quantity",
+            "price",
+            "additional"
+          ]
+        }
+      ]
+    },
+    "regulations": {
+      "type": "array",
+      "items": {}
+    },
+    "isBuyable": {
+      "type": "boolean"
+    },
+    "additional": {
+      "type": "object",
+      "properties": {
+        "sizing": {
+          "type": "string"
+        },
+        "isClickAndCollectEnabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sizing",
+        "isClickAndCollectEnabled"
+      ]
+    },
+    "stores": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "modelId",
+    "modelExtId",
+    "codeVnd",
+    "title",
+    "slug",
+    "type",
+    "brand",
+    "color",
+    "category",
+    "photos",
+    "videos",
+    "preview360",
+    "availableColors",
+    "description",
+    "information",
+    "deactivationDescription",
+    "preorderDescription",
+    "tags",
+    "sizeTable",
+    "sizes",
+    "regulations",
+    "isBuyable",
+    "additional",
+    "stores"
+  ]
+}

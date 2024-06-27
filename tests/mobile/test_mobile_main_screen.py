@@ -1,6 +1,6 @@
 import allure
 from allure_commons.types import Severity
-from tsum_tests.pages.mobile.main_screen import main_screen
+from tsum_tests.pages.mobile.main_screen_page import main_screen
 from tsum_tests.data.menu import MobileTabName
 
 
@@ -36,7 +36,7 @@ def test_new_in_tab():
 def test_brands_tab():
     test_tab_name = MobileTabName(
         tab_name='brands',
-        title_name='Бренды'
+        title_name='A'
     )
 
     main_screen.skip_first_notifications()

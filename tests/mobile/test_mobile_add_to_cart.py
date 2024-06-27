@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
-from tsum_tests.pages.mobile.main_screen import main_screen
-from tsum_tests.pages.mobile.cart import add_to_cart
+from tsum_tests.pages.mobile.main_screen_page import main_screen
+from tsum_tests.pages.mobile.cart_page import add_to_cart
 from tsum_tests.data.items import MobileItem
 
 

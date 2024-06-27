@@ -94,8 +94,6 @@ def test_login_by_email():
         last_name='Test',
         email=os.getenv("TEST_EMAIL"),
         password=os.getenv("TEST_PASSWORD"),
-        phone_number='',
-        bday_data='',
     )
     main_page.open()
 

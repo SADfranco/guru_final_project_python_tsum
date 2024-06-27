@@ -1,6 +1,8 @@
 import allure
 from allure_commons.types import Severity
-from tsum_tests.pages.api.add_to_cart import cart
+import jsonschema
+from tsum_tests.helper.api_requests import api_post
+from tsum_tests.helper.load_schema import load_schema
 
 
 @allure.tag('api')
@@ -11,10 +13,21 @@ from tsum_tests.pages.api.add_to_cart import cart
 @allure.feature("Sell items")
 @allure.link("https://www.tsum.ru/", name="Main Page")
 def test_add_to_chart(add_headers):
-    url = "https://api.tsum.ru/v6/cart/item"
+    schema = load_schema('add_item_to_cart.json')
+
+    endpoint = "/v6/cart/item"
     item = 13462198
     quantity = 1
+    payload = {
+        "type": "sku",
+        "id": f"{item}",
+        "quantity": quantity
+    }
 
-    response = cart.add_item_to_cart(url,add_headers, item, quantity)
+    response = api_post(endpoint, headers=add_headers, json=payload)
 
-    cart.check_response(item, response)
+    body = response.json()
+    assert response.status_code == 200
+    jsonschema.validate(body, schema)
+    assert body["items"][0]["item_id"] == item
+    assert body["items"][0]["sku"]["id"] == item

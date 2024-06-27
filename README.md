@@ -46,7 +46,9 @@ MOBILE:
 API:
 * ✅ Search item
 * ✅ Add item to the cart
+* ✅ Get items page
 * ✅ Login existing user by email
+* ✅ Login non existing user by email
 
 
 
@@ -79,13 +81,10 @@ API:
 ##### There are testing steps with descriptions, logs, screenshots and video on Packages page.
 ![This is an image](images/allure_report_packages.png)
 
-##### Video executing test (Successful login user)
-![This is an image](images/video_login_user.gif)
-
 
 <!-- Allure TestOps -->
 
-### <img width="3%" title="Allure TestOps" src="images/allure_testops.png"> Интеграция с Allure TestOps
+### <img width="3%" title="Allure TestOps" src="images/allure_testops.png"> Integration with Allure TestOps
 
 ### [Dashboard](https://allure.autotests.cloud/project/4303/dashboards)
 
@@ -106,3 +105,6 @@ API:
 ##### When all tests finish, the notification will be sent to Telegram with running test results.
 
 ![This is an image](images/tg_bot_notification.png)
+
+##### Video executing test (Successful login user)
+![This is an image](images/video_login_user.gif)

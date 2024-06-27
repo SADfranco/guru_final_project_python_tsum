@@ -1,55 +1,42 @@
 import allure
 import pytest
-import allure_commons
-from appium.options.android import UiAutomator2Options
-from dotenv import load_dotenv
-from selene import browser, support
-import os
-
-from utils import attach
-
+from selene import browser
 from appium import webdriver
+from tsum_tests.utils import attach
+from dotenv import load_dotenv
 
 
-@pytest.fixture(scope="session", autouse=True)
-def load_env():
-    load_dotenv()
+def pytest_addoption(parser):
+    parser.addoption(
+        "--context",
+        default="bstack",
+        help="Specify the test context"
+    )
 
 
-@pytest.fixture(scope='function', params=['android'], autouse=True)
-def platform(request):
-    options = UiAutomator2Options().load_capabilities({
-        # Specify device and os_version for testing
-        'platformName': 'android',
-        'platformVersion': '13.0',
-        'deviceName': 'Google Pixel 7',
+def pytest_configure(config):
+    context = config.getoption('--context')
+    env_file = f'.env.{context}'
+    load_dotenv(dotenv_path=env_file)
 
-        # Set URL of the application under test
-        'app': os.getenv("APP"),
 
-        # Set other BrowserStack capabilities
-        'bstack:options': {
-            'projectName': 'First Python project',
-            'buildName': 'browserstack-build-1',
-            'sessionName': 'BStack first_test',
+@pytest.fixture
+def context(request):
+    return request.config.getoption('--context')
 
-            # Set your access credentials
-            'userName': os.getenv("BS_LOGIN"),
-            'accessKey': os.getenv("BS_PASS")
-        }
-    })
 
-    with allure.step('init app session'):
+@pytest.fixture(scope='function', autouse=True)
+def android_mobile_management(context):
+    from config import config
+    options = config.to_driver_options(context=context)
+
+    with allure.step('setup app session'):
         browser.config.driver = webdriver.Remote(
-            os.getenv("REMOTE_URL"),
+            options.get_capability('remote_url'),
             options=options
         )
 
-    browser.config.timeout = float(os.getenv('timeout', '10.0'))
-
-    browser.config._wait_decorator = support._logging.wait_with(
-        context=allure_commons._allure.StepContext
-    )
+    browser.config.timeout = 10.0
 
     yield
 
@@ -57,7 +44,8 @@ def platform(request):
 
     session_id = browser.driver.session_id
 
-    with allure.step('tear down app session'):
+    with allure.step('tear down app session with id' + session_id):
         browser.quit()
 
-    attach.attach_bstack_video(session_id)
+    if context == 'bstack':
+        attach.attach_bstack_video(session_id)

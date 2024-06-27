@@ -2,7 +2,7 @@ import pytest
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from utils import attach
+from tsum_tests.utils import attach
 from dotenv import load_dotenv
 import os
 

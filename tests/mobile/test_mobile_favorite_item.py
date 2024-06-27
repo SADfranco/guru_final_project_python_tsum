@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
-from tsum_tests.pages.mobile.favorite_item import favorite_item
-from tsum_tests.pages.mobile.main_screen import main_screen
+from tsum_tests.pages.mobile.favorite_item_page import favorite_item
+from tsum_tests.pages.mobile.main_screen_page import main_screen
 from tsum_tests.data.items import MobileItem
 
 

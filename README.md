@@ -96,6 +96,9 @@ API:
 
 ![This is an image](images/allure_testops_tc.png)
 
+#### There are all tests runs (local or started from Jenkins) with build parameters on Launches page:
+
+![This is an image](images/allure_testops_launches.png)
 
 <!-- Telegram -->
 

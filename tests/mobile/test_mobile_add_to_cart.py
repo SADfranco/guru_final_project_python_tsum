@@ -23,6 +23,8 @@ def test_add_to_cart():
 
     add_to_cart.search_item(test_item)
 
+    add_to_cart.open_items_page(test_item)
+
     add_to_cart.add_to_cart()
 
     add_to_cart.go_to_cart()

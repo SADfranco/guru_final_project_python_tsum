@@ -43,7 +43,8 @@ def response_json_and_cookies(response):
                   attachment_type=AttachmentType.JSON, extension="json")
 
     allure.attach(body=str(response.cookies), name="Cookies", attachment_type=AttachmentType.TEXT, extension="txt")
-
+    
+    allure.attach(body=str(response.headers), name="Headers", attachment_type=AttachmentType.TEXT, extension="txt")
 
 def logging_response(response):
     logging.info(response.request.url)

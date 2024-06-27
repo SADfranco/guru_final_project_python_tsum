@@ -37,13 +37,24 @@ WEB:
 * ✅ Check profile left menu 
 * ✅ Logout from profile
 
+MOBILE:
+* ✅ Check tabs menu and title on main screen
+* ✅ Search item  
+* ✅ Add item to the favorite list
+* ✅ Add item to the cart
+
+API:
+* ✅ Search item
+* ✅ Add item to the cart
+* ✅ Login existing user by email
+
 
 
 <!-- Jenkins -->
 
 ### <img width="3%" title="Jenkins" src="images/jenkins.png"> Launch project on Jenkins
 
-### [Task on Jenkins](https://jenkins.autotests.cloud/job/guru_hw_14_python_SADfranco_preproject)
+### [Task on Jenkins](https://jenkins.autotests.cloud/job/guru_final_project_python_SADfranco_TSUM)
 
 ##### You can choose parameters before starting a build in the menu "Build with parameters". You can add stand, comment, browser version. When you start the build, it launches testing on Selenoid machine.
 ![This is an image](images/jenkins_job.png)
@@ -54,7 +65,7 @@ WEB:
 
 ### <img width="3%" title="Allure Report" src="images/allure_report.png"> Allure report
 
-### [Allure reports](https://jenkins.autotests.cloud/job/guru_hw_14_python_SADfranco_preproject/1/allure/#)
+### [Allure reports](https://jenkins.autotests.cloud/job/guru_final_project_python_SADfranco_TSUM/5/allure/#)
 
 ##### When automation executing tests finish, you can check results on Allure reports. The report link is on Jenkins page
 ![This is an image](images/allure_report_overview.png)
@@ -64,6 +75,9 @@ WEB:
 
 ##### There are testing steps with descriptions, logs, screenshots and video on Suites page.
 ![This is an image](images/allure_report_suites.png)
+
+##### There are testing steps with descriptions, logs, screenshots and video on Packages page.
+![This is an image](images/allure_report_packages.png)
 
 ##### Video executing test (Successful login user)
 ![This is an image](images/video_login_user.gif)

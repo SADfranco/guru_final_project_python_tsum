@@ -12,7 +12,7 @@ class AddToCart:
 
     def open_items_page(self, favorite_item):
         with step(f'Open item page with name {favorite_item.name}'):
-            browser.element((AppiumBy.XPATH, f'//android.widget.TextView[@text={favorite_item.name}]')).click()
+            browser.element((AppiumBy.XPATH, '//android.widget.TextView[@text="Сумка The Tote Bag"]')).click()
 
     def add_to_cart(self):
         with step(f'Add item to cart'):

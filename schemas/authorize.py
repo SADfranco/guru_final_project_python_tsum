@@ -35,16 +35,7 @@ authorize = {
                         "dyHashedEmail": {
                             "type": "string"
                         }
-                    },
-                    "required": [
-                        "isNewUser",
-                        "email",
-                        "userId",
-                        "uuid",
-                        "xid",
-                        "hasLinkedLoyaltyCard",
-                        "dyHashedEmail"
-                    ]
+                    }
                 }
             },
             "required": [

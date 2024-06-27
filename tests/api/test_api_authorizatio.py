@@ -19,6 +19,6 @@ def test_authorize_existing_user(add_headers):
     password = os.getenv("TEST_PASSWORD")
     userid = os.getenv("TEST_USER_ID")
 
-    response = authorization.authorize_existing_user(url,add_headers, email, password)
+    response = authorization.authorize_existing_user(url, add_headers, email, password)
 
     authorization.check_response(email, userid, response)

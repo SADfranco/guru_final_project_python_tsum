@@ -9,7 +9,7 @@ from tsum_tests.helper.load_schema import load_schema
 
 @allure.tag('api')
 @allure.tag('regress')
-@allure.title('Authorise existing user')
+@allure.title('Authorization existing user')
 @allure.severity(Severity.BLOCKER)
 @allure.label("owner", "SADfranco")
 @allure.feature("Authorization")

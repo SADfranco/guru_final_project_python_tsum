@@ -1,10 +1,10 @@
+.env.local_emulator
+.env.bstack
 
 tests/allure-results
 .idea
 allure-results
 .env
-.env.bstack
-.env.local_emulator
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

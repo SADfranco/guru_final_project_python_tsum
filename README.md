@@ -99,6 +99,15 @@ API:
 
 ![This is an image](images/allure_testops_launches.png)
 
+
+<!-- Jira -->
+
+### <img width="3%" title="Jira" src="images/jira.png"> Integration with Jira
+##### When you create integration with Jira, you can add test cases and runs directly to Jira task
+
+![This is an image](images/jira_tasks.png)
+
+
 <!-- Telegram -->
 
 ### <img width="3%" title="Telegram" src="images/tg.png"> Integration with Telegram

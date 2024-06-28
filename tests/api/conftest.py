@@ -7,7 +7,7 @@ AUTHORIZE_API = "/authorize"
 CATALOG_API = "/v3/catalog"
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session", autouse=True)
 def load_env():
     load_dotenv()
 

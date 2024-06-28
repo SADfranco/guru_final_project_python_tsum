@@ -18,7 +18,8 @@ def test_get_item_page(base_endpoint, add_headers):
     model_id = "00083571"
     model_type = "-solntcezashchitnye-ochki-alexander-mcqueen-seryi"
 
-    response = api_call.send_request(method='GET', url=f"{base_endpoint[2]}/item/{model_id}{model_type}",headers=add_headers)
+    response = api_call.send_request(method='GET', url=f"{base_endpoint[2]}/item/{model_id}{model_type}",
+                                     headers=add_headers)
 
     body = response.json()
     assert response.status_code == 200

@@ -15,13 +15,12 @@ from tsum_tests.helper.load_schema import load_schema
 def test_search_item(base_endpoint, add_headers):
     schema = load_schema('search_item.json')
 
-
     item = "Джинсы"
     payload = {
         "q": item
     }
     response = api_call.send_request(method='POST', url=f'{base_endpoint[2]}/search', headers=add_headers,
-                                                                                               json=payload)
+                                     json=payload)
 
     body = response.json()
     items_model = [element["id"] for element in body]

@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
 import jsonschema
-from tsum_tests.helper.api_requests import api_post
+from tsum_tests.helper.api_requests import api_call
 from tsum_tests.helper.load_schema import load_schema
 
 
@@ -24,7 +24,7 @@ def test_add_to_chart(add_headers):
         "quantity": quantity
     }
 
-    response = api_post(endpoint, headers=add_headers, json=payload)
+    response = api_call.api_post(endpoint, headers=add_headers, json=payload)
 
     body = response.json()
     assert response.status_code == 200

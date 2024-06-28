@@ -3,7 +3,7 @@ import allure
 from tsum_tests.utils import attach
 
 class ApiCall:
-    def api_get(method, endpoint, **kwargs):
+    def send_request(method, endpoint, **kwargs):
         with allure.step(f"Send API {method} Request to endpoint {endpoint}"):
             response = requests(method=method.upper(), url="https://api.tsum.ru" + endpoint, **kwargs)
 

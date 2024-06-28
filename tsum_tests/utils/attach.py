@@ -3,7 +3,10 @@ from allure_commons.types import AttachmentType
 import logging
 import allure
 import os
+from dotenv import load_dotenv
 
+def load_env():
+    load_dotenv()
 
 def add_screenshot(browser):
     png = browser.driver.get_screenshot_as_png()

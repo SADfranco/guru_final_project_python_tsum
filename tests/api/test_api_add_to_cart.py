@@ -14,9 +14,7 @@ from tsum_tests.helper.load_schema import load_schema
 @allure.link("https://www.tsum.ru/", name="Main Page")
 def test_add_to_chart(base_endpoint, add_headers):
     schema = load_schema('add_item_to_cart.json')
-    
-    method = "post"
-    endpoint = "/v6/cart/item"
+
     item = 13462198
     quantity = 1
     payload = {
@@ -25,7 +23,7 @@ def test_add_to_chart(base_endpoint, add_headers):
         "quantity": quantity
     }
 
-    response = api_call.send_request(method, endpoint, headers=add_headers, json=payload)
+    response = api_call.send_request(method='POST', url=f"{base_endpoint[0]}/item", headers=add_headers, json=payload)
 
     body = response.json()
     assert response.status_code == 200

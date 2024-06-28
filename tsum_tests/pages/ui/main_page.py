@@ -30,7 +30,7 @@ class MainPage:
         with allure.step("Type searching item amd press"):
             browser.element('[placeholder="Поиск"]').type(item.item).press_enter()
 
-    def check_seached_item(self, item):
+    def check_searched_item(self, item):
         with allure.step("Check searched item"):
             browser.element('[data-test-id="catalogTitle"]').should(have.exact_text(f'Поиск: {item.item}'.upper()))
             browser.element('[data-test-id="currentCatalog"]').should(have.text(f'Поиск: {item.item}'))

@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
 import jsonschema
-from tsum_tests.helper.api_requests import api_post
+from tsum_tests.helper.api_requests import api_call
 from tsum_tests.helper.load_schema import load_schema
 
 
@@ -12,15 +12,16 @@ from tsum_tests.helper.load_schema import load_schema
 @allure.label("owner", "SADfranco")
 @allure.feature("Search item")
 @allure.link("https://www.tsum.ru/", name="Main Page")
-def test_search_item(add_headers):
+def test_search_item(base_endpoint, add_headers):
     schema = load_schema('search_item.json')
 
-    endpoint = "/v3/catalog/search"
+
     item = "Джинсы"
     payload = {
         "q": item
     }
-    response = api_post(endpoint, headers=add_headers, json=payload)
+    response = api_call.send_request(method='POST', url=f'{base_endpoint[2]}/search', headers=add_headers,
+                                                                                               json=payload)
 
     body = response.json()
     items_model = [element["id"] for element in body]

@@ -78,7 +78,7 @@ def test_search_item():
 
     main_page.search_item(test_item)
 
-    main_page.check_seached_item(test_item)
+    main_page.check_searched_item(test_item)
 
 
 @allure.tag('web')

@@ -115,5 +115,12 @@ API:
 
 ![This is an image](images/tg_bot_notification.png)
 
-##### Video executing test (Successful login user)
+### Video executing test: 
+
+##### Web test: Successful login user
+
 ![This is an image](images/video_login_user.gif)
+
+##### Mobile test: Add item to cart
+
+![This is an image](images/video_add_to_cart.gif)

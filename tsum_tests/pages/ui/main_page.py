@@ -1,5 +1,5 @@
 import allure
-from selene import browser, have, be
+from selene import browser, have, be, command
 
 
 class MainPage:
@@ -38,7 +38,7 @@ class MainPage:
     def successful_login_by_email(self, existing_user):
         with allure.step("Fill email and password"):
             browser.element('[data-test-id="buttonLogin"]').click()
-            browser.element('.User__modalButton___FRTso').click()
+            browser.element('[data-test-id="loginViaEmail"]').perform(command.js.click)
             browser.element('[placeholder="Ваш email"]').type(existing_user.email)
             browser.element('[type="password"]').type(existing_user.password)
 
@@ -51,7 +51,7 @@ class MainPage:
     def unsuccessful_login_by_non_existing_email(self, non_existing_user):
         with allure.step("Fill non-existing email"):
             browser.element('[data-test-id="buttonLogin"]').click()
-            browser.element('.User__modalButton___FRTso').click()
+            browser.element('[data-test-id="loginViaEmail"]').perform(command.js.click)
             browser.element('[placeholder="Ваш email"]').type(non_existing_user.email)
 
     def check_error_by_non_existing_email(self):

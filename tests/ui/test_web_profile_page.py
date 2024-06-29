@@ -6,8 +6,8 @@ import tests.ui.test_web_main_page as login_existing_user
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.title('Profile left menu')
-@allure.tag("web")
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "SADfranco")
 @allure.feature("Left menu in personal profile")

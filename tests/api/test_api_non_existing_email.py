@@ -6,6 +6,7 @@ from tsum_tests.helper.load_schema import load_schema
 
 
 @allure.tag('api')
+@allure.label("layer", "API Tests")
 @allure.tag('regress')
 @allure.title('Check non existing email')
 @allure.severity(Severity.NORMAL)

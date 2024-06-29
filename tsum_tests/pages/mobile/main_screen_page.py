@@ -11,8 +11,8 @@ class MainScreen:
             browser.element((AppiumBy.ID, "ru.tsum.app:id/confirm_button")).click()
             try:
                 browser.element((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_button")).click()
-            except as err:
-                print(err)
+            except Exception as e:
+...             print e.message, e.args
 
     def open_tab(self, main_tabs):
         with step(f'Open tab "{main_tabs.tab_name}"'):

@@ -9,6 +9,7 @@ from tsum_tests.data.users import ExistingUser, NonExistingUser
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.tag('regress')
 @allure.title('Change region to English')
 @allure.severity(Severity.CRITICAL)

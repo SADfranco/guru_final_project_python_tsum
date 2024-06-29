@@ -8,6 +8,7 @@ from tsum_tests.data.items import MobileItem
 @allure.tag('Mobile')
 @allure.tag('Android')
 @allure.tag('regress')
+@allure.label("layer", "UI Tests")
 @allure.title('Check favorite item')
 @allure.severity(Severity.CRITICAL)
 @allure.label("owner", "SADfranco")

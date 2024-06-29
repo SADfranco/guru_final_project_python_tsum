@@ -7,6 +7,7 @@ from tsum_tests.data.menu import MobileTabName
 @allure.tag('Mobile')
 @allure.tag('Android')
 @allure.tag('regress')
+@allure.label("layer", "UI Tests")
 @allure.title('Check New In tab')
 @allure.severity(Severity.NORMAL)
 @allure.label("owner", "SADfranco")

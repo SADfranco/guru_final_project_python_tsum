@@ -12,7 +12,7 @@ class MainScreen:
             try:
                 browser.element((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_button")).click()
             except Exception as e:
-...             print (e.message, e.args)
+...             print(e)
 
     def open_tab(self, main_tabs):
         with step(f'Open tab "{main_tabs.tab_name}"'):

@@ -29,6 +29,7 @@ def test_change_region_to_english():
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.tag('regress')
 @allure.title('Change region to China')
 @allure.severity(Severity.CRITICAL)
@@ -48,6 +49,7 @@ def test_change_region_to_china():
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.tag('regress')
 @allure.title('Check all regions for choosing')
 @allure.severity(Severity.NORMAL)
@@ -65,6 +67,7 @@ def test_all_region_for_change():
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.tag('regress')
 @allure.title('Search existing item')
 @allure.severity(Severity.CRITICAL)
@@ -83,6 +86,7 @@ def test_search_item():
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.tag('regress')
 @allure.title('Login existing user by email')
 @allure.severity(Severity.BLOCKER)
@@ -104,6 +108,7 @@ def test_login_by_email():
 
 
 @allure.tag('web')
+@allure.label("layer", "UI Tests")
 @allure.tag('regress')
 @allure.title('Login non-existing user')
 @allure.severity(Severity.CRITICAL)

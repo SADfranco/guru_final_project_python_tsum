@@ -1,5 +1,4 @@
 import allure
-import pytest
 from allure_commons.types import Severity
 import jsonschema
 from tsum_tests.helper.api_requests import api_call
@@ -7,7 +6,7 @@ from tsum_tests.helper.load_schema import load_schema
 
 
 @allure.tag('api')
-@pytest.mark.api
+@allure.label("layer", "API Tests")
 @allure.tag('regress')
 @allure.title('Add item to cart')
 @allure.severity(Severity.BLOCKER)

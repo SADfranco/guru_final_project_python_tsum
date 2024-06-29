@@ -9,7 +9,10 @@ class MainScreen:
         with step('Skip first notifications'):
             browser.element((AppiumBy.ID, "ru.tsum.app:id/gender_background_image")).click()
             browser.element((AppiumBy.ID, "ru.tsum.app:id/confirm_button")).click()
-            browser.element((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_button")).click()
+            try:
+                browser.element((AppiumBy.ID, "com.android.permissioncontroller:id/permission_allow_button")).click()
+            except NoSuchElementException:
+                print("No such elements")
 
     def open_tab(self, main_tabs):
         with step(f'Open tab "{main_tabs.tab_name}"'):

@@ -7,6 +7,7 @@ from tsum_tests.helper.load_schema import load_schema
 
 
 @allure.tag('api')
+@allure.label("layer", "API Tests")
 @allure.tag('regress')
 @allure.title('Authorization existing user')
 @allure.severity(Severity.BLOCKER)

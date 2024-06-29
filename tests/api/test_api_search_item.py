@@ -6,6 +6,7 @@ from tsum_tests.helper.load_schema import load_schema
 
 
 @allure.tag('api')
+@allure.label("layer", "API Tests")
 @allure.tag('regress')
 @allure.title('Searching item from main page')
 @allure.severity(Severity.NORMAL)
